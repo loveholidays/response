@@ -2,7 +2,7 @@
 
 wait_for_db()
 {
-    while ! nc -z db 5432;
+    while ! nc -z $POSTGRES_HOST 5432;
     do sleep 1;
     done;
 }
